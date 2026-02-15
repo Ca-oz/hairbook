@@ -11,7 +11,7 @@ type Service = {
 
 export default function Home() {
   const router = useRouter();
-  const API = "http://127.0.0.1:8000";
+  const API = "https://hairbook-backend.onrender.com";
 
   const [services, setServices] = useState<Service[]>([]);
   const [selectedService, setSelectedService] = useState<number | null>(null);
