@@ -25,9 +25,3 @@ app.include_router(admin.router)
 @app.get("/")
 def root():
     return {"status": "Backend läuft"}
-
-ADMIN_KEY = "1234"  # später ändern!
-
-def verify_admin(x_admin_key: str = Header(...)):
-    if x_admin_key != ADMIN_KEY:
-        raise HTTPException(status_code=401, detail="Unauthorized")
